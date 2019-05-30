@@ -7,7 +7,7 @@ services:
 
 before_install:
   - docker build -t redis-example .
-    - docker run -d -p 6379:6379 redis-example
+    - docker run -p 6379:6379 redis-example
       - docker container list
 
 script:
