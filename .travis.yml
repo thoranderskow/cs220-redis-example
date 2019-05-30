@@ -7,10 +7,10 @@ services:
 
 before_install:
   - docker build -t redis-example .
-    - docker run -p 6379:6379 redis-example
-      - docker container list
+  - docker run -d -p 6379:6379 redis-example
+  - docker container list
 
 script:
  - make -C hiredis/
-  - make -C tests/
-   - ./tests/test-hgetset
+ - make -C tests/
+ - ./tests/test-hgetset
